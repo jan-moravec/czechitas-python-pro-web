@@ -2,3 +2,12 @@
 
 <h3>Kontaktní osoba</h3>
 <p>{{ object.contact }}</p>
+
+<h3>Kurzy</h3>
+<ul>
+    {% for item in object.courses %}
+    <li> 
+        {{ item.name }} 
+    </li>
+    {% endfor %}
+</ul>

@@ -30,6 +30,9 @@ class Branch(models.Model):
     contact = models.EmailField()
     employees = models.IntegerField()
 
+    def courses(self):
+        return Course.objects.filter(branch=self)
+
     class Meta:
         verbose_name_plural = 'Branches'
 
