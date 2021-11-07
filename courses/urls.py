@@ -11,4 +11,6 @@ urlpatterns = [
     path('people', views.PeopleListView.as_view(), name='people_list'),
     path('course/<int:pk>', views.CourseDetailView.as_view(), name='course_detail'),
     path('branch/<int:pk>', views.BranchDetailView.as_view(), name='branch_detail'),
+    path('application', views.ApplicationCreateView.as_view(), name='application_create'),
+    path('application_confirmation', views.ApplicationConfirmation.as_view(), name='application_confirmation'),
 ]

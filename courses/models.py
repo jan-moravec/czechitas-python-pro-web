@@ -31,6 +31,7 @@ class Branch(models.Model):
     employees = models.IntegerField()
 
     def courses(self):
+        # Return all courses that belongs to this branch
         return Course.objects.filter(branch=self)
 
     class Meta:
@@ -50,3 +51,14 @@ class People(models.Model):
 
     def __str__(self):
         return self.first_name + ' ' + self.family_name
+
+
+class Application(models.Model):
+    email = models.EmailField()
+    first_name = models.CharField(max_length=100)
+    last_name = models.CharField(max_length=100)
+    motivation = models.TextField()
+    course = models.ForeignKey(Course, on_delete=models.SET_NULL, null=True)
+
+    def __str__(self):
+        return self.email + ' - ' + self.course.__str__()
