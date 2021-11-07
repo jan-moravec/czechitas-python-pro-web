@@ -17,3 +17,12 @@ class Branch(models.Model):
 
     class Meta:
         verbose_name_plural = "Branches"
+
+
+class People(models.Model):
+    first_name = models.CharField(max_length=100)
+    family_name = models.CharField(max_length=100)
+    email = models.EmailField()
+
+    class Meta:
+        verbose_name_plural = "People"
