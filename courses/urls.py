@@ -13,4 +13,6 @@ urlpatterns = [
     path('branch/<int:pk>', views.BranchDetailView.as_view(), name='branch_detail'),
     path('application', views.ApplicationCreateView.as_view(), name='application_create'),
     path('application_confirmation', views.ApplicationConfirmation.as_view(), name='application_confirmation'),
+    path('register_person', views.PersonRegister.as_view(), name='person_register'),
+    path('register_success', views.PersonRegisterSuccess.as_view(), name='person_register_success'),
 ]

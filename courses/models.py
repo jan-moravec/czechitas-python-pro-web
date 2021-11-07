@@ -45,6 +45,7 @@ class People(models.Model):
     first_name = models.CharField(max_length=100)
     family_name = models.CharField(max_length=100)
     email = models.EmailField()
+    active = models.BooleanField(default=False)
 
     class Meta:
         verbose_name_plural = 'People'
