@@ -9,5 +9,5 @@ class ContactsView(TemplateView):
     template_name = 'contacts.html'
 
 
-class ContactsView(TemplateView):
+class AboutView(TemplateView):
     template_name = 'about.html'
