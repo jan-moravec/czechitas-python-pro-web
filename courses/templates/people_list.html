@@ -1,0 +1,5 @@
+<ul>
+    {% for item in object_list %}
+    <li>{{ item.family_name }}, {{ item.first_name }} ({{ item.email }})</li>
+    {% endfor %}
+</ul>

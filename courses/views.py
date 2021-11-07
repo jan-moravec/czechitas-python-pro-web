@@ -23,3 +23,7 @@ class CourseListView(ListView):
 class BranchListView(ListView):
     model = models.Branch
     template_name = "branch_list.html"
+
+class PeopleListView(ListView):
+    model = models.People
+    template_name = "people_list.html"
