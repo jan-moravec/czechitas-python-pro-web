@@ -17,7 +17,8 @@ class Course(models.Model):
     end = models.DateTimeField()
     description = models.CharField(max_length=1000)
     price = models.IntegerField()
-    category = models.ForeignKey(Category, on_delete=models.SET_NULL, null=True, blank=True)
+    category = models.ForeignKey(
+        Category, on_delete=models.SET_NULL, null=True, blank=True)
 
     def __str__(self):
         return self.name
