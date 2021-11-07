@@ -9,4 +9,5 @@ urlpatterns = [
     path('courses', views.CourseListView.as_view(), name='course_list'),
     path('branches', views.BranchListView.as_view(), name='branch_list'),
     path('people', views.PeopleListView.as_view(), name='people_list'),
+    path('course/<int:pk>', views.CourseDetailView.as_view(), name='course_detail'),
 ]

@@ -1,5 +1,7 @@
 <ul>
     {% for item in object_list %}
-    <li>{{ item.name }} - {{ item.description }}</li>
+    <li> 
+        <a href="/course/{{ item.id }}">{{ item.name }}</a> 
+    </li>
     {% endfor %}
 </ul>
